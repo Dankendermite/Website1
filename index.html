@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hello Im Dankendermite Welcome To My Webpage</h1>
+    </header>
+
+    <main>
+        <article>
+            <h2>Hello World</h2>
+            <p>This is my first blog post. Welcome! So this is my Blog im Dankendermite I have this webpage bc im intrested in coding and i feel as if this could help me learn the HTML code i have dreams to make a video game called the 8 bit warrior of 2099 i will update this page whenever i feel like it :/ </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>Total Page Views: <span id="viewCount">0</span></p>
+    </footer>
+
+    <script>
+        // Viewer counter logic
+        let pageViews = localStorage.getItem('pageViews') || 0;
+        document.getElementById('viewCount').textContent = pageViews;
+
+        function incrementViews() {
+            pageViews++;
+            localStorage.setItem('pageViews', pageViews);
+            document.getElementById('viewCount').textContent = pageViews;
+        }
+
+        // Increment views on page load
+        incrementViews();
+    </script>
+</body>
+</html>
